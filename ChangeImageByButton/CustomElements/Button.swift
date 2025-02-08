@@ -24,15 +24,4 @@ class Button: UIButton {
         layer.cornerRadius = 10
         heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
-    
-    private func setupLayout() {
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            topAnchor.constraint(equalTo: topAnchor),
-            bottomAnchor.constraint(equalTo: bottomAnchor),
-            leadingAnchor.constraint(equalTo: leadingAnchor),
-            trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
-    }
 }

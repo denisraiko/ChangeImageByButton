@@ -48,4 +48,7 @@ class ImageView: UIView {
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
+    func updateImage(name: String) {
+            imageView.image = UIImage(named: name)
+        }
 }
