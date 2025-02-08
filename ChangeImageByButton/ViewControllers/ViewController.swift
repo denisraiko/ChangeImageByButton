@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private let stackView = UIStackView()
     private let textLabel = UILabel()
     private let imageView = ImageView(imageName: "1")
+    private let button = Button(title: "Next image", color: .magenta)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
         view.addGradient()
         view.addSubview(stackView)
         setupStackView()
-        setupLabel(title: "Номер изображения")
+        setupLabel(title: "Number of image")
         setupLayout()
     }
     
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.addArrangedSubview(textLabel)
         stackView.addArrangedSubview(imageView)
+        stackView.addArrangedSubview(button)
     }
     
     private func setupLayout() {
