@@ -9,4 +9,30 @@ import Foundation
 import UIKit
 
 class Button: UIButton {
+    init(title: String, color: UIColor) {
+        super.init(frame: .zero)
+        setupButton(title: title, color: color)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupButton(title: String, color: UIColor) {
+        setTitle(title, for: .normal)
+        setTitleColor(.white, for: .normal)
+        backgroundColor = color
+        layer.cornerRadius = 10
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
+    }
+    
+    private func setupLayout() {
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            topAnchor.constraint(equalTo: topAnchor),
+            bottomAnchor.constraint(equalTo: bottomAnchor),
+            leadingAnchor.constraint(equalTo: leadingAnchor),
+            trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
 }
